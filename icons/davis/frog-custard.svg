@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#939598;}
+	.st1{fill:#F1F2F2;}
+	.st2{fill:#5C913B;}
+	.st3{fill:#77B255;}
+	.st4{fill:#C6E5B3;}
+	.st5{fill:#FFFFFF;}
+	.st6{fill:#292F33;}
+	.st7{fill:none;}
+</style>
+<g id="Ebene_2_1_">
+	<g id="Ebene_1-2">
+		<ellipse class="st0" cx="18" cy="23" rx="18" ry="10"/>
+		<ellipse class="st1" cx="18" cy="21" rx="18" ry="10"/>
+		<path class="st2" d="M31,20c0,4-5.8,7.2-13,7.2S5,24,5,20s5.8-7.2,13-7.2S31,16,31,20z"/>
+		<ellipse class="st3" cx="18" cy="20" rx="11" ry="5.6"/>
+		<path class="st4" d="M18,24c-5.8,0-10.6-2.9-10.2-5.8c0.3,3.6,4.7,0.2,10.2,0.2s9.9,3.4,10.2-0.1C28.5,21.1,23.7,24,18,24z"/>
+		<path class="st3" d="M28.2,18.3c-0.3,3.5-4.8,0.1-10.2,0.1s-9.9,3.4-10.2-0.2c0-0.1,0-0.2,0-0.2c0.3-1.4,0.6-2.6,0.9-3.6l0,0
+			c0.3-1,0.5-1.8,0.8-2.5C10.3,9.7,11.1,9,12.1,9c0.7,0,1.5-0.8,2.8-1.3l0,0c1-0.4,2-0.7,3.1-0.7c1.1,0,2.1,0.2,3.1,0.7
+			C22.4,8.2,23.2,9,23.9,9c1,0,1.7,0.7,2.5,2.9c0.2,0.7,0.5,1.5,0.8,2.5l0,0c0.3,1,0.6,2.2,0.9,3.6C28.2,18.1,28.2,18.2,28.2,18.3z"
+			/>
+		<path class="st3" d="M25.6,11c0,2.2-3.4,4-7.6,4s-7.6-1.8-7.6-4s3.4-4,7.6-4S25.6,8.8,25.6,11z"/>
+		<circle class="st3" cx="12.1" cy="7" r="3.2"/>
+		<circle class="st5" cx="11.9" cy="6.7" r="1.9"/>
+		<circle class="st6" cx="11.9" cy="6.7" r="0.8"/>
+		<circle class="st3" cx="23.9" cy="7" r="3.2"/>
+		<circle class="st5" cx="24.1" cy="6.7" r="1.9"/>
+		<circle class="st6" cx="24.1" cy="6.7" r="0.8"/>
+		<rect y="0" class="st7" width="36" height="36"/>
+	</g>
+</g>
+</svg>

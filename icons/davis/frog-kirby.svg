@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 865.2 865.2" style="enable-background:new 0 0 865.2 865.2;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#406429;}
+	.st1{fill:#5D913B;}
+	.st2{fill:#78B355;}
+	.st3{fill:#C7DFB3;}
+	.st4{fill:#FFFFFF;}
+	.st5{fill:#2A3034;}
+	.st6{fill:none;}
+</style>
+<g id="Ebene_2_1_">
+	<g id="Ebene_1-2">
+		<path class="st0" d="M723,586.7c0,0,164.9,105.7,139.6,182.9s-411.4,42.8-416.3-24.2"/>
+		
+			<ellipse transform="matrix(0.6126 -0.7904 0.7904 0.6126 -235.6953 896.7538)" class="st1" cx="797" cy="688.8" rx="23" ry="36.3"/>
+		<path class="st0" d="M142.2,586.7c0,0-164.9,105.7-139.6,182.9S414,812.4,419,745.4"/>
+		
+			<ellipse transform="matrix(0.7904 -0.6126 0.6126 0.7904 -407.6174 186.2133)" class="st1" cx="68.3" cy="688.7" rx="36.3" ry="23"/>
+		<circle class="st2" cx="431.2" cy="398.6" r="347.1"/>
+		<path class="st3" d="M735.2,566.3c-59.1,107-173.1,179.4-304,179.4c-131.6,0-246.1-73.2-305-181.2c51.4,23,169.4-43.3,306.8-43.3
+			C566.4,521.2,681.6,583.8,735.2,566.3z"/>
+		<path class="st2" d="M714.7,558.3c141.4,58.4,176.3-120.5,56.6-229.6"/>
+		<polygon class="st2" points="770.3,332.6 767,329.6 769,340.8 		"/>
+		<path class="st2" d="M91.1,328.6C-28.6,437.8,6.3,616.7,147.7,558.3"/>
+		<polygon class="st2" points="92,332.6 95.4,329.6 93.4,340.8 		"/>
+		<circle class="st1" cx="379.3" cy="484" r="17"/>
+		<circle class="st1" cx="486" cy="484" r="17"/>
+		<circle class="st4" cx="298.6" cy="283.3" r="65"/>
+		<circle class="st5" cx="298.6" cy="283.3" r="27.9"/>
+		<circle class="st4" cx="567.5" cy="283.3" r="65"/>
+		<circle class="st5" cx="567.5" cy="283.3" r="27.9"/>
+		<rect y="0" class="st6" width="865.2" height="865.2"/>
+	</g>
+</g>
+</svg>

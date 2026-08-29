@@ -1,0 +1,23 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- ring -->
+  <circle cx="12" cy="2.4" r="1.5" fill="none" stroke="currentColor" stroke-width="1.3"/>
+  <!-- handle -->
+  <rect x="11.1" y="3.9" width="1.8" height="3.8" rx="0.35" fill="currentColor"/>
+
+  <!-- right wing -->
+  <path fill="currentColor" d="M13.92,9.78 Q15.79,8.43 17.60,5.60 L12.68,8.22 Z"/>
+  <path fill="currentColor" d="M13.68,10.39 Q16.11,9.53 19.00,7.20 L12.94,8.53 Z"/>
+  <path fill="currentColor" d="M13.45,10.91 Q16.22,10.67 19.90,9.10 L13.20,8.93 Z"/>
+  <path fill="currentColor" d="M13.23,11.37 Q15.64,11.73 19.10,11.00 L13.44,9.39 Z"/>
+  <path fill="currentColor" d="M12.87,11.72 Q14.28,12.59 16.80,12.70 L13.82,9.96 Z"/>
+
+  <!-- left wing -->
+  <path fill="currentColor" d="M10.08,9.78 Q8.21,8.43 6.40,5.60 L11.32,8.22 Z"/>
+  <path fill="currentColor" d="M10.32,10.39 Q7.89,9.53 5.00,7.20 L11.06,8.53 Z"/>
+  <path fill="currentColor" d="M10.55,10.91 Q7.78,10.67 4.10,9.10 L10.80,8.93 Z"/>
+  <path fill="currentColor" d="M10.77,11.37 Q8.36,11.73 4.90,11.00 L10.56,9.39 Z"/>
+  <path fill="currentColor" d="M11.13,11.72 Q9.72,12.59 7.20,12.70 L10.18,9.96 Z"/>
+
+  <!-- central spear point -->
+  <path fill="currentColor" d="M12,7.7 L13.5,10.3 L12,22.6 L10.5,10.3 Z"/>
+</svg>

@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Remote icon cache
+.cache/
+
+# Generated icon modules + metadata
+package/icons/
+
+# Generated web metadata
+apps/web/public/metadata.json
+
+# Generated pack loader map
+apps/web/app/icons/packs.generated.ts
+
+# Build outputs
+dist/
+package/dist/
+apps/web/.next/
+.next/
+
+# Turbo / TypeScript cache
+.turbo/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env
+.env
+.env.local
+.env.*.local
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,126 @@
+{
+  "name": "@davi-icons/icons",
+  "version": "0.1.0",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js",
+      "default": "./dist/src/index.js"
+    },
+    "./metadata": {
+      "import": "./dist/icons/metadata.json"
+    },
+    "./dv": {
+      "types": "./dist/icons/dv.d.ts",
+      "import": "./dist/icons/dv.js"
+    },
+    "./ai": {
+      "types": "./dist/icons/ai.d.ts",
+      "import": "./dist/icons/ai.js"
+    },
+    "./bi": {
+      "types": "./dist/icons/bi.d.ts",
+      "import": "./dist/icons/bi.js"
+    },
+    "./ci": {
+      "types": "./dist/icons/ci.d.ts",
+      "import": "./dist/icons/ci.js"
+    },
+    "./co": {
+      "types": "./dist/icons/co.d.ts",
+      "import": "./dist/icons/co.js"
+    },
+    "./di": {
+      "types": "./dist/icons/di.d.ts",
+      "import": "./dist/icons/di.js"
+    },
+    "./fa": {
+      "types": "./dist/icons/fa.d.ts",
+      "import": "./dist/icons/fa.js"
+    },
+    "./fi": {
+      "types": "./dist/icons/fi.d.ts",
+      "import": "./dist/icons/fi.js"
+    },
+    "./fc": {
+      "types": "./dist/icons/fc.d.ts",
+      "import": "./dist/icons/fc.js"
+    },
+    "./fl": {
+      "types": "./dist/icons/fl.d.ts",
+      "import": "./dist/icons/fl.js"
+    },
+    "./gi": {
+      "types": "./dist/icons/gi.d.ts",
+      "import": "./dist/icons/gi.js"
+    },
+    "./hi": {
+      "types": "./dist/icons/hi.d.ts",
+      "import": "./dist/icons/hi.js"
+    },
+    "./io": {
+      "types": "./dist/icons/io.d.ts",
+      "import": "./dist/icons/io.js"
+    },
+    "./la": {
+      "types": "./dist/icons/la.d.ts",
+      "import": "./dist/icons/la.js"
+    },
+    "./md": {
+      "types": "./dist/icons/md.d.ts",
+      "import": "./dist/icons/md.js"
+    },
+    "./oi": {
+      "types": "./dist/icons/oi.d.ts",
+      "import": "./dist/icons/oi.js"
+    },
+    "./pi": {
+      "types": "./dist/icons/pi.d.ts",
+      "import": "./dist/icons/pi.js"
+    },
+    "./pr": {
+      "types": "./dist/icons/pr.d.ts",
+      "import": "./dist/icons/pr.js"
+    },
+    "./pa": {
+      "types": "./dist/icons/pa.d.ts",
+      "import": "./dist/icons/pa.js"
+    },
+    "./px": {
+      "types": "./dist/icons/px.d.ts",
+      "import": "./dist/icons/px.js"
+    },
+    "./ri": {
+      "types": "./dist/icons/ri.d.ts",
+      "import": "./dist/icons/ri.js"
+    },
+    "./si": {
+      "types": "./dist/icons/si.d.ts",
+      "import": "./dist/icons/si.js"
+    },
+    "./vi": {
+      "types": "./dist/icons/vi.d.ts",
+      "import": "./dist/icons/vi.js"
+    },
+    "./wi": {
+      "types": "./dist/icons/wi.d.ts",
+      "import": "./dist/icons/wi.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && cp icons/metadata.json dist/icons/metadata.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "react": "^19.2.8",
+    "typescript": "^5.8.3"
+  }
+}
