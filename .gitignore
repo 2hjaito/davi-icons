@@ -4,15 +4,6 @@ node_modules/
 # Remote icon cache
 .cache/
 
-# Generated icon modules + metadata
-package/icons/
-
-# Generated web metadata
-apps/web/public/metadata.json
-
-# Generated pack loader map
-apps/web/app/icons/packs.generated.ts
-
 # Build outputs
 dist/
 package/dist/

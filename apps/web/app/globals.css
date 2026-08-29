@@ -3,7 +3,7 @@
   --bg-soft: #edf2ff;
   --panel: #ffffff;
   --panel-strong: #f8fafc;
-  --text: #101828;
+  --text: #222F3D;
   --muted: #475467;
   --border: rgba(15, 23, 42, 0.1);
   --accent: #3d62ff;
@@ -39,6 +39,8 @@ button, input, select { font: inherit; }
 
 .page {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background:
     radial-gradient(circle at top, rgba(124, 156, 255, 0.15), transparent 30%),
     var(--bg);
@@ -499,10 +501,6 @@ h1 {
   z-index: 50;
 }
 
-/* Normalize icon color across packs so the color picker always applies */
-.davi-tint svg [fill]:not([fill='none']) { fill: currentColor; }
-.davi-tint svg [stroke]:not([stroke='none']) { stroke: currentColor; }
-
 /* Icon cards: icon only, no chrome until hovered */
 .icon-cell {
   display: grid;
@@ -608,19 +606,33 @@ h1 {
 .site-footer {
   border-top: 1px solid var(--border);
   background: var(--panel);
-  padding: 28px 24px;
+  padding: 16px 24px;
   color: var(--muted);
   font-size: 13px;
+  margin-top: auto;
 }
 .site-footer-inner {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  justify-content: center;
+  gap: 10px;
   flex-wrap: wrap;
+  text-align: center;
 }
-.site-footer a { color: var(--text); }
-.site-footer a:hover { color: var(--accent); }
-.site-footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
+.site-footer-dot {
+  color: var(--muted);
+  user-select: none;
+}
+.site-footer a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--border);
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+.site-footer a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}

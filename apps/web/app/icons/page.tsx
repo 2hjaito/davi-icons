@@ -38,7 +38,7 @@ export default function IconsPage() {
   const [packModules, setPackModules] = useState<Record<string, Record<string, IconComponent>>>({});
   const requestedPacks = useRef(new Set<string>());
   const [scale, setScale] = useState(2.4);
-  const [color, setColor] = useState("#7c9cff");
+  const [color, setColor] = useState("#222F3D");
   const [animation, setAnimation] = useState<Animation>("none");
   const [speed, setSpeed] = useState(2);
   const [flip, setFlip] = useState<Flip>("normal");
@@ -46,7 +46,13 @@ export default function IconsPage() {
 
   useEffect(() => {
     const savedTheme = window.localStorage.getItem("davi-theme") as "dark" | "light" | null;
-    setTheme(savedTheme ?? "light");
+    const initialTheme = savedTheme ?? "light";
+    setTheme(initialTheme);
+    if (initialTheme === "dark") {
+      setColor("#7c9cff");
+    } else {
+      setColor("#222F3D");
+    }
   }, []);
 
   useEffect(() => {
@@ -129,7 +135,20 @@ export default function IconsPage() {
             <Link href="/icons">Icons</Link>
           </nav>
           <div className="nav-actions">
-            <ThemeSwitch dark={theme === "dark"} onToggle={() => setTheme((current) => (current === "dark" ? "light" : "dark"))} />
+            <ThemeSwitch
+              dark={theme === "dark"}
+              onToggle={() => {
+                setTheme((current) => {
+                  const next = current === "dark" ? "light" : "dark";
+                  setColor((prev) => {
+                    if (prev === "#7c9cff" && next === "light") return "#222F3D";
+                    if (prev === "#222F3D" && next === "dark") return "#7c9cff";
+                    return prev;
+                  });
+                  return next;
+                });
+              }}
+            />
             <button type="button" className="menu-toggle" aria-label="Open pack menu" onClick={() => setNavOpen(true)}>
               ☰
             </button>

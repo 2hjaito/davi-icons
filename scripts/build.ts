@@ -47,7 +47,7 @@ export async function buildAllPacks(): Promise<Record<string, number>> {
         seen.add(componentName);
 
         const rawSvg = fs.readFileSync(fullPath, "utf8");
-        const { viewBox, nodes } = processSvgContent(rawSvg, fullPath);
+        const { viewBox, nodes } = processSvgContent(rawSvg, fullPath, `${pack.id}_${rawName}`);
 
         packIcons.push({
           name: rawName,

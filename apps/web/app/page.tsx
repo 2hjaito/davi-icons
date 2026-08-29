@@ -2,17 +2,23 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { DvArrowLeft, DvArrowRight, DvCloudUpload, DvDatabase, DvDaviLogo } from "@davi-icons/icons";
+import {
+  DvFrogArtist,
+  DvFrogAstronaut,
+  DvFrogDetective,
+  DvFrogSuperman,
+  DvBathingFrog,
+} from "@davi-icons/icons";
 import { DaviLogo } from "./components/logo";
 import { ThemeSwitch } from "./components/theme-switch";
 import { SiteFooter } from "./components/site-footer";
 
 const demoIcons = [
-  { name: "davi-logo", label: "Davi Logo" },
-  { name: "arrow-left", label: "Arrow Left" },
-  { name: "arrow-right", label: "Arrow Right" },
-  { name: "cloud-upload", label: "Cloud Upload" },
-  { name: "database", label: "Database" },
+  { name: "frog-artist", label: "Frog Artist" },
+  { name: "frog-astronaut", label: "Frog Astronaut" },
+  { name: "frog-detective", label: "Frog Detective" },
+  { name: "frog-superman", label: "Frog Superman" },
+  { name: "bathing-frog", label: "Bathing Frog" },
 ] as const;
 
 const installOptions = {
@@ -52,7 +58,7 @@ export default function HomePage() {
           <nav className="nav-links" aria-label="Main navigation">
             <Link href="/">Home</Link>
             <Link href="/icons">Icons</Link>
-            <Link href="/icons/dv/davi-logo">Preview</Link>
+            <Link href="/icons/dv/frog-artist">Preview</Link>
           </nav>
           <div className="nav-actions">
             <ThemeSwitch dark={theme === "dark"} onToggle={toggleTheme} />
@@ -72,18 +78,18 @@ export default function HomePage() {
             </p>
             <div className="hero-actions">
               <Link href="/icons" className="button button-primary">Explore icons</Link>
-              <Link href="/icons/dv/davi-logo" className="button">View example</Link>
+              <Link href="/icons/dv/frog-artist" className="button">View example</Link>
             </div>
           </div>
           <div className="card hero-preview">
             <div className="preview-grid">
               {demoIcons.map((icon) => (
                 <div key={icon.name} className="preview-item">
-                  {icon.name === "davi-logo" && <DvDaviLogo size={34} />}
-                  {icon.name === "arrow-left" && <DvArrowLeft size={34} />}
-                  {icon.name === "arrow-right" && <DvArrowRight size={34} />}
-                  {icon.name === "cloud-upload" && <DvCloudUpload size={34} />}
-                  {icon.name === "database" && <DvDatabase size={34} />}
+                  {icon.name === "frog-artist" && <DvFrogArtist size={34} />}
+                  {icon.name === "frog-astronaut" && <DvFrogAstronaut size={34} />}
+                  {icon.name === "frog-detective" && <DvFrogDetective size={34} />}
+                  {icon.name === "frog-superman" && <DvFrogSuperman size={34} />}
+                  {icon.name === "bathing-frog" && <DvBathingFrog size={34} />}
                   <strong>{icon.label}</strong>
                 </div>
               ))}

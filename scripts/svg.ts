@@ -82,11 +82,37 @@ const INHERITABLE_ROOT_ATTRS = new Set([
   "clip-rule",
 ]);
 
-export function processSvgContent(rawSvg: string, filePath?: string): ProcessedSvg {
+export function processSvgContent(rawSvg: string, filePath?: string, idPrefix?: string): ProcessedSvg {
+  const safePrefix = idPrefix ? idPrefix.replace(/[^a-zA-Z0-9_-]/g, "_") : undefined;
+  const plugins: any[] = [
+    {
+      name: "preset-default",
+      params: {
+        overrides: {
+          removeViewBox: false,
+          cleanupIds: false,
+          inlineStyles: {
+            onlyMatchedOnce: false,
+          },
+        },
+      },
+    },
+  ];
+
+  if (safePrefix) {
+    plugins.push({
+      name: "prefixIds",
+      params: {
+        prefix: safePrefix,
+        delim: "_",
+      },
+    });
+  }
+
   const optimized = optimize(rawSvg, {
     path: filePath,
     multipass: true,
-    plugins: [{ name: "preset-default" }],
+    plugins,
   }).data;
 
   const ast = parse(optimized);

@@ -1,0 +1,58 @@
+// AUTO-GENERATED FILE. DO NOT EDIT MANUALLY.
+import type { ComponentType } from "react";
+
+export type IconComponent = ComponentType<{ size?: number }>;
+
+export const packLoaders: Record<string, () => Promise<Record<string, IconComponent>>> = {
+  dv: () => import("@davi-icons/icons/dv") as unknown as Promise<Record<string, IconComponent>>,
+  ai: () => import("@davi-icons/icons/ai") as unknown as Promise<Record<string, IconComponent>>,
+  bi: () => import("@davi-icons/icons/bi") as unknown as Promise<Record<string, IconComponent>>,
+  ci: () => import("@davi-icons/icons/ci") as unknown as Promise<Record<string, IconComponent>>,
+  co: () => import("@davi-icons/icons/co") as unknown as Promise<Record<string, IconComponent>>,
+  di: () => import("@davi-icons/icons/di") as unknown as Promise<Record<string, IconComponent>>,
+  fa: () => import("@davi-icons/icons/fa") as unknown as Promise<Record<string, IconComponent>>,
+  fi: () => import("@davi-icons/icons/fi") as unknown as Promise<Record<string, IconComponent>>,
+  fc: () => import("@davi-icons/icons/fc") as unknown as Promise<Record<string, IconComponent>>,
+  fl: () => import("@davi-icons/icons/fl") as unknown as Promise<Record<string, IconComponent>>,
+  gi: () => import("@davi-icons/icons/gi") as unknown as Promise<Record<string, IconComponent>>,
+  hi: () => import("@davi-icons/icons/hi") as unknown as Promise<Record<string, IconComponent>>,
+  io: () => import("@davi-icons/icons/io") as unknown as Promise<Record<string, IconComponent>>,
+  la: () => import("@davi-icons/icons/la") as unknown as Promise<Record<string, IconComponent>>,
+  md: () => import("@davi-icons/icons/md") as unknown as Promise<Record<string, IconComponent>>,
+  oi: () => import("@davi-icons/icons/oi") as unknown as Promise<Record<string, IconComponent>>,
+  pi: () => import("@davi-icons/icons/pi") as unknown as Promise<Record<string, IconComponent>>,
+  pr: () => import("@davi-icons/icons/pr") as unknown as Promise<Record<string, IconComponent>>,
+  pa: () => import("@davi-icons/icons/pa") as unknown as Promise<Record<string, IconComponent>>,
+  px: () => import("@davi-icons/icons/px") as unknown as Promise<Record<string, IconComponent>>,
+  ri: () => import("@davi-icons/icons/ri") as unknown as Promise<Record<string, IconComponent>>,
+  si: () => import("@davi-icons/icons/si") as unknown as Promise<Record<string, IconComponent>>,
+  vi: () => import("@davi-icons/icons/vi") as unknown as Promise<Record<string, IconComponent>>,
+  wi: () => import("@davi-icons/icons/wi") as unknown as Promise<Record<string, IconComponent>>,
+};
+
+export const packNames: Record<string, string> = {
+  dv: "Davis Icons",
+  ai: "Academicons",
+  bi: "Bootstrap Icons",
+  ci: "CoreUI Icons",
+  co: "Crypto Icons",
+  di: "Devicon",
+  fa: "Font Awesome",
+  fi: "Feather Icons",
+  fc: "Flat Color Icons",
+  fl: "Flag Icons",
+  gi: "Game Icons",
+  hi: "Heroicons",
+  io: "Ionicons",
+  la: "Line Awesome",
+  md: "Material Design Icons",
+  oi: "Octicons",
+  pi: "Pokemon Icons",
+  pr: "PrimeIcons",
+  pa: "Pixelarticons",
+  px: "Phosphor Icons",
+  ri: "Remix Icon",
+  si: "Simple Icons",
+  vi: "VSCode Icons",
+  wi: "Weather Icons",
+};

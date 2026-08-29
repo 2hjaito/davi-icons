@@ -1,7 +1,22 @@
 {
   "name": "@davi-icons/icons",
   "version": "0.1.0",
+  "description": "Framework-agnostic icon platform with 35,000+ tree-shakeable icons for React and Next.js",
   "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2hjaito/davi-icons.git",
+    "directory": "package"
+  },
+  "homepage": "https://github.com/2hjaito/davi-icons",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "sideEffects": false,
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
@@ -113,6 +128,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json && cp icons/metadata.json dist/icons/metadata.json",
+    "prepublishOnly": "npm run build",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "peerDependencies": {
