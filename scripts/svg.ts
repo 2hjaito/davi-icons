@@ -12,6 +12,35 @@ export interface ProcessedSvg {
   nodes: DaviIconNode[];
 }
 
+function normalizePathData(value: string): string {
+  return value.replace(/\s+/g, "").toLowerCase();
+}
+
+function isInvisibleFill(attributes: Record<string, string | number | boolean>): boolean {
+  return String(attributes.fill ?? "").toLowerCase() === "none";
+}
+
+function isFullViewBoxBackground(node: DaviIconNode, viewBox: string): boolean {
+  const [tag, attributes] = node;
+  if (isInvisibleFill(attributes)) return false;
+
+  const [, , width, height] = viewBox.split(" ").map(Number);
+  if (tag === "rect") {
+    const x = Number(attributes.x ?? 0);
+    const y = Number(attributes.y ?? 0);
+    return x === 0 && y === 0 && Number(attributes.width) === width && Number(attributes.height) === height;
+  }
+
+  if (tag !== "path" || typeof attributes.d !== "string") return false;
+
+  return normalizePathData(attributes.d) === normalizePathData(`M0 0h${width}v${height}H0z`);
+}
+
+function removeLeadingBackground(nodes: DaviIconNode[], viewBox: string): DaviIconNode[] {
+  if (nodes.length < 2 || !isFullViewBoxBackground(nodes[0], viewBox)) return nodes;
+  return nodes.slice(1);
+}
+
 function ensureValidViewBox(viewBox: string): string {
   if (!viewBox || !viewBox.trim()) {
     throw new Error("ViewBox is required");
@@ -154,6 +183,6 @@ export function processSvgContent(rawSvg: string, filePath?: string, idPrefix?: 
 
   return {
     viewBox: validViewBox,
-    nodes: Object.keys(rootAttributes).length > 0 ? [["g", rootAttributes, nodes]] : nodes,
+    nodes: Object.keys(rootAttributes).length > 0 ? [["g", rootAttributes, removeLeadingBackground(nodes, validViewBox)]] : removeLeadingBackground(nodes, validViewBox),
   };
 }
