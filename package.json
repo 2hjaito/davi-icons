@@ -7,7 +7,7 @@
   ],
   "packageManager": "pnpm@10.15.1",
   "scripts": {
-    "build": "turbo run build",
+    "build": "npm run icons:sync && turbo run build",
     "icons:sync": "tsx scripts/build.ts",
     "package:build": "cd package && npm run build",
     "icons:sync:build": "npm run icons:sync && npm run package:build",

@@ -1,6 +1,6 @@
 {
   "name": "davi-icons",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Framework-agnostic icon platform with 35,000+ tree-shakeable icons for React and Next.js",
   "type": "module",
   "author": "tranhuudang",
@@ -103,6 +103,10 @@
       "types": "./dist/icons/la.d.ts",
       "import": "./dist/icons/la.js"
     },
+    "./lu": {
+      "types": "./dist/icons/lu.d.ts",
+      "import": "./dist/icons/lu.js"
+    },
     "./md": {
       "types": "./dist/icons/md.d.ts",
       "import": "./dist/icons/md.js"
@@ -134,6 +138,14 @@
     "./si": {
       "types": "./dist/icons/si.d.ts",
       "import": "./dist/icons/si.js"
+    },
+    "./ti": {
+      "types": "./dist/icons/ti.d.ts",
+      "import": "./dist/icons/ti.js"
+    },
+    "./tb": {
+      "types": "./dist/icons/tb.d.ts",
+      "import": "./dist/icons/tb.js"
     },
     "./vi": {
       "types": "./dist/icons/vi.d.ts",

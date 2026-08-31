@@ -368,6 +368,50 @@ export const weatherIcons = simplePack({
   license: { name: "SIL OFL 1.1", url: "https://scripts.sil.org/OFL" },
 });
 
+export const lucideIcons = simplePack({
+  id: "lu",
+  name: "Lucide",
+  repo: "lucide-icons/lucide",
+  branch: "main",
+  files: "icons/*.svg",
+  website: "https://lucide.dev/",
+  license: { name: "ISC", url: "https://github.com/lucide-icons/lucide/blob/main/LICENSE" },
+});
+
+export const typicons = simplePack({
+  id: "ti",
+  name: "Typicons",
+  repo: "stephenhutchings/typicons.font",
+  branch: "master",
+  files: "src/svg/*.svg",
+  website: "https://www.s-ings.com/typicons/",
+  license: { name: "CC BY-SA 4.0", url: "https://creativecommons.org/licenses/by-sa/4.0/" },
+});
+
+export const tablerIcons: PackManifest = {
+  id: "tb",
+  name: "Tabler Icons",
+  downloadFileName: "tabler-icons.tar.gz",
+  downloadURL: "https://codeload.github.com/tabler/tabler-icons/tar.gz/refs/heads/main",
+  contents: [
+    {
+      files: "icons/outline/*.svg",
+      formatter: (name) => `Tb${toPascalCase(name)}`,
+      prefix: (name) => `tb-${name}`,
+      nameFromPath: (file) => file.split("/").pop()?.replace(/\.svg$/i, "") ?? "unknown",
+    },
+    {
+      files: "icons/filled/*.svg",
+      formatter: (name) => `Tb${toPascalCase(name)}Filled`,
+      prefix: (name) => `tb-${name}-filled`,
+      nameFromPath: (file) => `${file.split("/").pop()?.replace(/\.svg$/i, "") ?? "unknown"}-filled`,
+    },
+  ],
+  projectUrl: "https://github.com/tabler/tabler-icons",
+  website: "https://tabler.io/icons",
+  license: { name: "MIT", url: "https://opensource.org/licenses/MIT" },
+};
+
 export const fontAwesome: PackManifest = {
   id: "fa",
   name: "Font Awesome",
@@ -432,6 +476,7 @@ export const manifests: PackManifest[] = [
   heroIcons,
   ionIcons,
   lineAwesome,
+  lucideIcons,
   materialDesignIcons,
   octIcons,
   pokemonIcons,
@@ -440,6 +485,8 @@ export const manifests: PackManifest[] = [
   phosphorIcons,
   remixIcons,
   simpleIcons,
+  typicons,
+  tablerIcons,
   vscodeIcons,
   weatherIcons,
 ];

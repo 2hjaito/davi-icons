@@ -20,6 +20,7 @@ This repository currently follows a minimal, source-first structure inspired by 
 - Consumers import from the single root entry: `import { Bi5Circle } from "@davi-icons/icons";`. Every icon is a standalone `const` export in an ESM module with `sideEffects: false`, so bundlers tree-shake down to only the icons that are imported.
 - Remote third-party packs are downloaded into `.cache/` and not committed.
 - Davis SVGs stay committed under `icons/davis` and are exported as the `dv` pack.
+- `package/icons/*.ts`, `package/icons/metadata.json`, `apps/web/public/metadata.json`, and `apps/web/app/icons/packs.generated.ts` are all generated and gitignored (regenerate with `pnpm icons:sync`). The root `npm run build` runs `icons:sync` automatically before `turbo run build`.
 
 ## Generated metadata
 

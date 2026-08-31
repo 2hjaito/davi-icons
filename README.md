@@ -5,6 +5,11 @@
 <h1 align="center">Davi Icons</h1>
 
 <p align="center">
+  <a href="https://www.npmjs.com/package/davi-icons"><img src="https://img.shields.io/npm/v/davi-icons.svg" alt="npm version" /></a>
+  <a href="https://www.npmjs.com/package/davi-icons"><img src="https://img.shields.io/npm/dm/davi-icons.svg" alt="npm downloads" /></a>
+</p>
+
+<p align="center">
   A framework-agnostic icon platform. One import path, 13,000+ tree-shakeable icons.
 </p>
 
@@ -13,6 +18,8 @@
 ```bash
 pnpm add davi-icons
 ```
+
+Package page: [npmjs.com/package/davi-icons](https://www.npmjs.com/package/davi-icons)
 
 ## Usage
 
@@ -49,6 +56,7 @@ Every icon is a standalone ESM export and the package is marked `sideEffects: fa
 | `hi` | Heroicons (outline + solid) | 648 |
 | `io` | Ionicons | 1357 |
 | `la` | Line Awesome | 1544 |
+| `lu` | Lucide | 1790 |
 | `md` | Material Design Icons | 7447 |
 | `oi` | Octicons | 743 |
 | `pi` | Pokemon Icons | 18 |
@@ -58,9 +66,11 @@ Every icon is a standalone ESM export and the package is marked `sideEffects: fa
 | `ri` | Remix Icon | 3229 |
 | `si` | Simple Icons | 3457 |
 | `vi` | VSCode Icons | 1588 |
+| `ti` | Typicons | 336 |
+| `tb` | Tabler Icons | 6184 |
 | `wi` | Weather Icons | 219 |
 
-Total: **35,398 icons**.
+Total: **43,900 icons**.
 
 ## Development
 

@@ -10,6 +10,12 @@ package/dist/
 apps/web/.next/
 .next/
 
+# Generated icon packs (regenerate with `pnpm icons:sync`)
+package/icons/*.ts
+package/icons/metadata.json
+apps/web/public/metadata.json
+apps/web/app/icons/packs.generated.ts
+
 # Turbo / TypeScript cache
 .turbo/
 *.tsbuildinfo

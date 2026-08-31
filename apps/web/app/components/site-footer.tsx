@@ -21,6 +21,12 @@ export function SiteFooter() {
         <a href="https://github.com/2hjaito/davi-icons" target="_blank" rel="noreferrer">
           View on GitHub
         </a>
+        <span className="site-footer-dot" aria-hidden="true">
+          ·
+        </span>
+        <a href="https://www.npmjs.com/package/davi-icons" target="_blank" rel="noreferrer">
+          View on npm
+        </a>
       </div>
     </footer>
   );

@@ -62,6 +62,8 @@ export default function HomePage() {
           </nav>
           <div className="nav-actions">
             <ThemeSwitch dark={theme === "dark"} onToggle={toggleTheme} />
+            <a href="https://www.npmjs.com/package/davi-icons" target="_blank" rel="noreferrer" className="button">npm</a>
+            <a href="https://github.com/2hjaito/davi-icons" target="_blank" rel="noreferrer" className="button">GitHub</a>
             <Link href="/icons" className="button button-primary">Browse icons</Link>
           </div>
         </div>
