@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/2hjaito/davi-icons/issues"
   },
-  "homepage": "https://github.com/2hjaito/davi-icons#readme",
+  "homepage": "https://davi-icons.vercel.app",
   "publishConfig": {
     "access": "public"
   },

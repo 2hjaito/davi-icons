@@ -1,9 +1,18 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
+    "//#icons:sync": {
+      "cache": false,
+      "outputs": [
+        "package/icons/**",
+        "apps/web/public/metadata.json",
+        "apps/web/app/icons/packs.generated.ts"
+      ]
+    },
     "build": {
       "dependsOn": [
-        "^build"
+        "^build",
+        "//#icons:sync"
       ],
       "outputs": [
         "dist/**",
