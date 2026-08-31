@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@davi-icons/icons": "workspace:*",
+    "davi-icons": "workspace:*",
     "next": "14.2.15",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"

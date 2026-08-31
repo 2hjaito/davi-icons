@@ -9,9 +9,13 @@
   "scripts": {
     "build": "turbo run build",
     "icons:sync": "tsx scripts/build.ts",
+    "package:build": "cd package && npm run build",
+    "icons:sync:build": "npm run icons:sync && npm run package:build",
     "dev": "turbo run dev",
     "dev:web": "pnpm --filter web dev",
-    "publish:pkg": "pnpm -C package publish --access public --no-git-checks"
+    "publish:pkg": "npm run publish:patch",
+    "publish:patch": "npm run icons:sync && npm --prefix package version patch --no-git-tag-version && npm publish ./package --access public",
+    "publish:minor": "npm run icons:sync && npm --prefix package version minor --no-git-tag-version && npm publish ./package --access public"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",

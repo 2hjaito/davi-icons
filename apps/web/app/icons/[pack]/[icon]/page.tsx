@@ -49,7 +49,7 @@ function IconPreview({ pack, iconName, metadata }: { pack: string; iconName: str
   const copyImport = async () => {
     const iconEntry = metadata.find((item) => item.pack === pack && item.name === iconName);
     if (iconEntry && IconComponent) {
-      const source = `import { ${iconEntry.componentName} } from "@davi-icons/icons";`;
+      const source = `import { ${iconEntry.componentName} } from "davi-icons";`;
       await navigator.clipboard.writeText(source);
       setCopied(true);
       setTimeout(() => setCopied(false), 1200);
@@ -137,7 +137,7 @@ function IconPreview({ pack, iconName, metadata }: { pack: string; iconName: str
             <div>
               <h3>Import Usage</h3>
               <pre className="install-code" style={{ marginTop: 8 }}>
-                {`import { ${iconEntry?.componentName} } from "@davi-icons/icons";`}
+                {`import { ${iconEntry?.componentName} } from "davi-icons";`}
               </pre>
               <button type="button" className="button" style={{ marginTop: 8 }} onClick={copyImport}>
                 {copied ? "Copied!" : "Copy Import"}

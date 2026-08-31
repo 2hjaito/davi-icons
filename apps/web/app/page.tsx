@@ -8,7 +8,7 @@ import {
   DvFrogDetective,
   DvFrogSuperman,
   DvBathingFrog,
-} from "@davi-icons/icons";
+} from "davi-icons";
 import { DaviLogo } from "./components/logo";
 import { ThemeSwitch } from "./components/theme-switch";
 import { SiteFooter } from "./components/site-footer";
@@ -22,9 +22,9 @@ const demoIcons = [
 ] as const;
 
 const installOptions = {
-  npm: "npm install @davi-icons/icons",
-  pnpm: "pnpm add @davi-icons/icons",
-  yarn: "yarn add @davi-icons/icons",
+  npm: "npm install davi-icons",
+  pnpm: "pnpm add davi-icons",
+  yarn: "yarn add davi-icons",
 } as const;
 
 export default function HomePage() {

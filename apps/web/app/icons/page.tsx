@@ -103,7 +103,7 @@ export default function IconsPage() {
     }
   }, [visibleIcons]);
 
-  const importSource = toast ? `import { ${toast.componentName} } from "@davi-icons/icons";` : "";
+  const importSource = toast ? `import { ${toast.componentName} } from "davi-icons";` : "";
 
   const copyImport = async () => {
     if (!importSource) return;

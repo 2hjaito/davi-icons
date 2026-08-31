@@ -47,7 +47,7 @@ importers:
 
   apps/web:
     dependencies:
-      '@davi-icons/icons':
+      davi-icons:
         specifier: workspace:*
         version: link:../../package
       next:

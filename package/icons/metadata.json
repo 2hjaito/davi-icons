@@ -891,6 +891,11 @@
   },
   {
     "pack": "dv",
+    "name": "projects",
+    "componentName": "DvProjects"
+  },
+  {
+    "pack": "dv",
     "name": "raised-hands",
     "componentName": "DvRaisedHands"
   },
@@ -943,6 +948,16 @@
     "pack": "dv",
     "name": "sweating-frog",
     "componentName": "DvSweatingFrog"
+  },
+  {
+    "pack": "dv",
+    "name": "terminal-blink",
+    "componentName": "DvTerminalBlink"
+  },
+  {
+    "pack": "dv",
+    "name": "terminal",
+    "componentName": "DvTerminal"
   },
   {
     "pack": "dv",

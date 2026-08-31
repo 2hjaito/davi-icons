@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <g fill="currentColor">
+    <path d="M3 8.25A2.25 2.25 0 0 1 5.25 6H9l1.2 1.6H18.75A2.25 2.25 0 0 1 21 9.85v7.9A2.25 2.25 0 0 1 18.75 20H5.25A2.25 2.25 0 0 1 3 17.75v-9.5Z"/>
+    <path opacity="0.18" d="M4 9.5h16v1.8H4z"/>
+    <path d="M13.3 11.5h3.4c.6 0 1 .4 1 1s-.4 1-1 1h-3.4c-.6 0-1-.4-1-1s.4-1 1-1Z"/>
+    <path d="M13.7 15.5 9.4 12.1v6.8l4.3-3.4Z">
+      <animate attributeName="opacity" values="1;0.2;1" dur="0.9s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>

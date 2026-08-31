@@ -115,7 +115,7 @@ export async function buildAllPacks(): Promise<Record<string, number>> {
     "",
     "export const packLoaders: Record<string, () => Promise<Record<string, IconComponent>>> = {",
     ...exportNames.map(
-      (id) => `  ${id}: () => import("@davi-icons/icons/${id}") as unknown as Promise<Record<string, IconComponent>>,`
+      (id) => `  ${id}: () => import("davi-icons/${id}") as unknown as Promise<Record<string, IconComponent>>,`
     ),
     "};",
     "",

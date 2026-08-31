@@ -11,18 +11,18 @@
 ## Install
 
 ```bash
-pnpm add @davi-icons/icons
+pnpm add davi-icons
 ```
 
 ## Usage
 
 ```tsx
-import { Bi5Circle, DvDaviKunaiWings } from "@davi-icons/icons";
+import { Bi5Circle, DvFrogArtist } from "davi-icons";
 
 export function Example() {
   return (
     <>
-      <DvDaviKunaiWings size={32} />
+      <DvFrogArtist size={32} />
       <Bi5Circle size={24} color="#6366f1" />
     </>
   );
