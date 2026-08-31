@@ -1,5 +1,5 @@
 import { optimize } from "svgo";
-import { parse, type Element, type Node } from "svg-parser";
+import { parse, type ElementNode, type Node } from "svg-parser";
 
 export type DaviIconNode = [
   tag: string,
@@ -36,9 +36,20 @@ function isFullViewBoxBackground(node: DaviIconNode, viewBox: string): boolean {
   return normalizePathData(attributes.d) === normalizePathData(`M0 0h${width}v${height}H0z`);
 }
 
+function removeWhiteFill(node: DaviIconNode): DaviIconNode {
+  const [tag, attributes, children] = node;
+  const nextAttributes = { ...attributes };
+  const fill = String(nextAttributes.fill ?? "").toLowerCase();
+  if (fill === "#fff" || fill === "#ffffff" || fill === "white") {
+    delete nextAttributes.fill;
+  }
+
+  return children ? [tag, nextAttributes, children.map(removeWhiteFill)] : [tag, nextAttributes];
+}
+
 function removeLeadingBackground(nodes: DaviIconNode[], viewBox: string): DaviIconNode[] {
   if (nodes.length < 2 || !isFullViewBoxBackground(nodes[0], viewBox)) return nodes;
-  return nodes.slice(1);
+  return nodes.slice(1).map(removeWhiteFill);
 }
 
 function ensureValidViewBox(viewBox: string): string {
@@ -61,7 +72,7 @@ function ensureValidViewBox(viewBox: string): string {
 
 function convertElement(node: Node): DaviIconNode | null {
   if (node.type !== "element") return null;
-  const element = node as Element;
+  const element = node as ElementNode;
   const tag = element.tagName;
   if (!tag) return null;
 
@@ -146,7 +157,7 @@ export function processSvgContent(rawSvg: string, filePath?: string, idPrefix?: 
 
   const ast = parse(optimized);
   const svgElement = ast.children.find(
-    (child): child is Element => typeof child === "object" && child.type === "element" && child.tagName?.toLowerCase() === "svg"
+    (child): child is ElementNode => typeof child === "object" && child.type === "element" && child.tagName?.toLowerCase() === "svg"
   );
 
   if (!svgElement) {

@@ -1,6 +1,6 @@
 {
   "name": "davi-icons",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "Framework-agnostic icon platform with 35,000+ tree-shakeable icons for React and Next.js",
   "type": "module",
   "author": "tranhuudang",
