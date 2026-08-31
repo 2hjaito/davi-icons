@@ -71,8 +71,8 @@ function renderNode(node: DaviIconNode): React.ReactNode {
 
 export function DaviIcon({ icon, size, width, height, title, ...rest }: DaviIconProps) {
   if (!icon) return null;
-  const computedWidth = width ?? size ?? icon.width ?? 24;
-  const computedHeight = height ?? size ?? icon.height ?? 24;
+  const computedWidth = width ?? size ?? "1em";
+  const computedHeight = height ?? size ?? "1em";
   const ariaHidden = title ? undefined : true;
   return (
     <svg
