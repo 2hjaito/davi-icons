@@ -3,6 +3,7 @@ node_modules/
 
 # Remote icon cache
 .cache/
+.temp/
 
 # Build outputs
 dist/
