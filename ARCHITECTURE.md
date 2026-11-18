@@ -45,11 +45,13 @@ This repository currently follows a minimal, source-first structure inspired by 
 
 ## Web app icon browser
 
-- `/icons` - displays all generated icons (currently 35,398 icons from 24 packs)
+- `/` - icon browser with all generated icons (`/icons` redirects here)
   - Fetches `metadata.json` at runtime
   - Sidebar filters by pack, search filters by icon or component name
-  - Renders real icon components, 200 at a time ("Load more")
+  - Renders real icon components, 200 at a time, loading more automatically on scroll
   - Clicking an icon opens a bottom toast with the import line and a copy button
+
+- `/docs` - install and usage docs; `/changelog` - rendered from the root `CHANGELOG.md`
 
 - `/icons/[pack]/[icon]` - displays a single icon detail page
   - Reads metadata.json to verify icon exists

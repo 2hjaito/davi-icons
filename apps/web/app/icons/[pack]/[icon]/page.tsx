@@ -3,9 +3,7 @@
 import Link from "next/link";
 import { Suspense, useEffect, useState, type ComponentType } from "react";
 import { packLoaders } from "../../packs.generated";
-import { DaviLogo } from "../../../components/logo";
-import { ThemeSwitch } from "../../../components/theme-switch";
-import { SiteFooter } from "../../../components/site-footer";
+import { SiteHeader } from "../../../components/site-header";
 
 type IconMetadata = {
   pack: string;
@@ -61,7 +59,7 @@ function IconPreview({ pack, iconName, metadata }: { pack: string; iconName: str
       <main className="page container" style={{ padding: "64px 0" }}>
         <h1>Icon not found</h1>
         <p style={{ color: "var(--muted)" }}>{error}</p>
-        <Link href="/icons" className="button">
+        <Link href="/" className="button">
           Back to icons
         </Link>
       </main>
@@ -80,35 +78,11 @@ function IconPreview({ pack, iconName, metadata }: { pack: string; iconName: str
 
   return (
     <main className="page">
-      <header className="header">
-        <div className="container nav">
-          <Link href="/" className="brand" aria-label="Davi Icons home">
-            <span className="brand-mark">
-              <DaviLogo />
-            </span>
-            <span>DAVI ICONS</span>
-          </Link>
-          <nav className="nav-links" aria-label="Main navigation">
-            <Link href="/">Home</Link>
-            <Link href="/icons">Icons</Link>
-          </nav>
-          <div className="nav-actions">
-            <ThemeSwitch
-              dark={typeof document !== "undefined" && document.documentElement.getAttribute("data-theme") === "dark"}
-              onToggle={() => {
-                const current = document.documentElement.getAttribute("data-theme") || "light";
-                const next = current === "dark" ? "light" : "dark";
-                document.documentElement.setAttribute("data-theme", next);
-                window.localStorage.setItem("davi-theme", next);
-              }}
-            />
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       <section className="section container">
         <div className="breadcrumb" style={{ marginBottom: 24, color: "var(--muted)" }}>
-          <Link href="/icons">Icons</Link> / <span style={{ textTransform: "uppercase" }}>{pack}</span> / {iconName}
+          <Link href="/">Icons</Link> / <span style={{ textTransform: "uppercase" }}>{pack}</span> / {iconName}
         </div>
 
         <div className="card" style={{ padding: 32, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 32, alignItems: "center" }}>
@@ -135,7 +109,7 @@ function IconPreview({ pack, iconName, metadata }: { pack: string; iconName: str
 
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             <div>
-              <h3>Import Usage</h3>
+              <h3 style={{ margin: 0, fontSize: 15 }}>Import usage</h3>
               <pre className="install-code" style={{ marginTop: 8 }}>
                 {`import { ${iconEntry?.componentName} } from "davi-icons";`}
               </pre>
@@ -147,27 +121,13 @@ function IconPreview({ pack, iconName, metadata }: { pack: string; iconName: str
         </div>
       </section>
 
-      <SiteFooter />
     </main>
   );
 }
 
 export default function IconDetailPage({ params }: { params: { pack: string; icon: string } }) {
   const { pack, icon } = params;
-  const [theme, setTheme] = useState<"dark" | "light">("light");
   const [metadata, setMetadata] = useState<IconMetadata[]>([]);
-
-  useEffect(() => {
-    const savedTheme = window.localStorage.getItem("davi-theme") as "dark" | "light" | null;
-    const nextTheme = savedTheme ?? "light";
-    setTheme(nextTheme);
-    document.documentElement.setAttribute("data-theme", nextTheme);
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    window.localStorage.setItem("davi-theme", theme);
-  }, [theme]);
 
   useEffect(() => {
     fetch("/metadata.json")
