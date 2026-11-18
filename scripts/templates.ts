@@ -20,7 +20,7 @@ export function generatePackModule(icons: DaviIconDefinition[]): string {
   ];
 
   for (const icon of icons) {
-    lines.push(`export const ${icon.componentName} = createDaviIcon(${JSON.stringify(icon, null, 2)} as DaviIconDefinition);`);
+    lines.push(`export const ${icon.componentName} = /* @__PURE__ */ createDaviIcon(${JSON.stringify(icon, null, 2)} as DaviIconDefinition);`);
     lines.push("");
   }
 
