@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.3.2 — 2026-11-18
 
 - Add Zalo (color and outline), Davish app, Adobe and macOS traffic-light icons to the Davis pack.
 - Redesign the website: the icon browser is now the home page, with a compact header, Docs and Changelog pages.
